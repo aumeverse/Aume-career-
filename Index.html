@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AUME Career – Personalized Career Guidance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #000;
+      color: #f3f3f3;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: #000;
+      border-bottom: 1px solid #333;
+    }
+    header img {
+      width: 90px;
+      margin-bottom: 1rem;
+    }
+    nav a {
+      color: #f59e0b;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: white;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #f59e0b;
+    }
+    .hero p {
+      margin-top: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      margin-top: 2rem;
+      padding: 12px 25px;
+      background: #f59e0b;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .section {
+      margin-top: 3rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      color: #f59e0b;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 140, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .newsletter {
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .newsletter input[type="email"] {
+      padding: 12px;
+      width: 70%;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .newsletter button {
+      padding: 12px 20px;
+      background-color: #f59e0b;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #0a0a0a;
+      border-top: 1px solid #333;
+      font-size: 0.95em;
+      color: #aaa;
+    }
+    .footer-icons {
+      margin: 1rem 0;
+    }
+    .footer-icons a {
+      margin: 0 10px;
+      color: #f59e0b;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+    }
+    .footer-icons svg {
+      width: 18px;
+      height: 18px;
+      fill: #f59e0b;
+    }
+    @media(max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/d4ZLDRD0/Screenshot-20250629-190214.jpg" alt="AUME Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h1>Your Career. Our Mission.</h1>
+      <p>AUME Career is your personal support system to craft powerful resumes, sharpen your online presence, and gain clarity on your professional journey. All our services are reviewed and guided by real career experts.</p>
+      <p><strong>We also host FREE Weekly Career Guidance Workshops</strong> for students, job seekers & anyone feeling stuck — open to all!</p>
+      <a href="#" class="cta-btn">Fill Google Form to Get Started</a>
+    </section>
+
+    <section class="section" id="services">
+      <h2>How We Help You</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Step 1: Book a Free Diagnosis</h3>
+          <p>We connect over call or message and understand your current situation.</p>
+        </div>
+        <div class="card">
+          <h3>Step 2: Resume & Profile Review</h3>
+          <p>Our experts carefully review your resume, LinkedIn, and overall presence.</p>
+        </div>
+        <div class="card">
+          <h3>Step 3: Receive Custom Plan</h3>
+          <p>You get a personalized action plan — what to fix, build, and focus on.</p>
+        </div>
+        <div class="card">
+          <h3>Step 4: 24/7 Support & Mentorship</h3>
+          <p>Ongoing guidance through WhatsApp, email, and optional video sessions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section newsletter" id="newsletter">
+      <h2>Stay In The Loop</h2>
+      <p>Subscribe to our newsletter to get the latest career tips, resume ideas, job leads, and event invites delivered to your inbox.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <div class="footer-icons">
+      <a href="mailto:infoaume.in@gmail.com">
+        <svg viewBox="0 0 512 512"><path d="M502.3 190.8l-192-160A48 48 0 0 0 272 32H64a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h384a48 48 0 0 0 48-48V240a48 48 0 0 0-17.7-49.2zM464 432a16 16 0 0 1-16 16H64a16 16 0 0 1-16-16V80a16 16 0 0 1 16-16h208v128a32 32 0 0 0 32 32h128z"/></svg>
+        infoaume.in@gmail.com
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256c0 110.1 71.6 203.2 170.7 236.2 12.5 2.3 17.1-5.4 17.1-12v-44.4c-69.5 15.1-84-33.5-84-33.5-11.4-28.9-27.8-36.6-27.8-36.6-22.7-15.5 1.7-15.2 1.7-15.2 25 1.8 38.2 25.6 38.2 25.6 22.3 38.2 58.4 27.2 72.6 20.8 2.2-16.1 8.7-27.2 15.9-33.5-55.5-6.3-113.9-27.8-113.9-123.6 0-27.3 9.8-49.6 25.8-67.1-2.6-6.3-11.2-31.9 2.5-66.5 0 0 21-6.7 68.8 25.6a240.6 240.6 0 0 1 125.2 0c47.7-32.3 68.7-25.6 68.7-25.6 13.8 34.6 5.2 60.2 2.5 66.5 16 17.5 25.8 39.8 25.8 67.1 0 96-58.5 117.3-114.2 123.4 8.9 7.7 16.8 22.9 16.8 46.2v68.5c0 6.6 4.5 14.4 17.2 12C432.4 459.2 504 366.1 504 256 504 119 393 8 256 8z"/></svg>
+        LinkedIn: AUME Career
+      </a>
+      <a href="https://instagram.com/aumeverse">
+        <svg viewBox="0 0 512 512"><path d="M349.33 69.33A93.33 93.33 0 1 1 256 162.66a93.33 93.33 0 0 1 93.33-93.33m0-37.33A130.66 130.66 0 1 0 480 162.66 130.69 130.69 0 0 0 349.33 32zM256 352a96 96 0 1 0 96 96 96.11 96.11 0 0 0-96-96zM256 480a128 128 0 1 1 128-128 128.14 128.14 0 0 1-128 128z"/></svg>
+        Instagram: @aumeverse
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 384 512"><path d="M168 0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h344c13.3 0 24-10.7 24-24V168L248 0H168zm48 128V0l128 128H216z"/></svg>
+        Location: Mumbai, India
+      </a>
+    </div>
+    <p>© 2025 AUME Career, a division of AUMEverse. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
