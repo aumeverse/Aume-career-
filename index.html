@@ -556,18 +556,21 @@
         // --- WHATSAPP INTEGRATION ---
         function sendToWhatsApp() {
             const input = document.getElementById('love-reply');
-            const message = input.value.trim();
+            const message = input.value;
             
-            if(message === "") {
+            if(!message || message.trim() === "") {
                 alert("Please write something sweet! 🥺");
                 return;
             }
 
-            // Redirect to WhatsApp with the specific number
-            // Added 91 for India Country Code
+            // Using api.whatsapp.com for better compatibility
+            // Explicitly set to 91 + 8828578141
             const phoneNumber = "918828578141";
-            const finalText = encodeURIComponent(`Hey Abhishek! I saw your site. ${message} 💖`);
-            window.location.href = `https://wa.me/${phoneNumber}?text=${finalText}`;
+            // No prefix text, strictly the user's message
+            const encodedText = encodeURIComponent(message);
+            
+            // Redirect using the robust API URL
+            window.location.href = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
         }
     </script>
 </body>
