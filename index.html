@@ -1,229 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AUME Career – Personalized Career Guidance</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: #000;
-      color: #f3f3f3;
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: #000;
-      border-bottom: 1px solid #333;
-    }
-    header img {
-      width: 90px;
-      margin-bottom: 1rem;
-    }
-    nav a {
-      color: #f59e0b;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: white;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem 1.5rem;
-    }
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      color: #f59e0b;
-    }
-    .hero p {
-      margin-top: 1rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-btn {
-      margin-top: 2rem;
-      padding: 12px 25px;
-      background: #f59e0b;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .section {
-      margin-top: 3rem;
-    }
-    .section h2 {
-      font-size: 2rem;
-      color: #f59e0b;
-      margin-bottom: 1.2rem;
-      text-align: center;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #111;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 140, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .newsletter {
-      background-color: #111;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .newsletter input[type="email"] {
-      padding: 12px;
-      width: 70%;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-    .newsletter button {
-      padding: 12px 20px;
-      background-color: #f59e0b;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #0a0a0a;
-      border-top: 1px solid #333;
-      font-size: 0.95em;
-      color: #aaa;
-    }
-    .footer-icons {
-      margin: 1rem 0;
-    }
-    .footer-icons a {
-      margin: 0 10px;
-      color: #f59e0b;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.95rem;
-    }
-    .footer-icons svg {
-      width: 18px;
-      height: 18px;
-      fill: #f59e0b;
-    }
-    @media(max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .newsletter input[type="email"] {
-        width: 100%;
-        margin-bottom: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Shon Pari 💖</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #ff4d6d;
+            --secondary-color: #ff8fa3;
+            --bg-color-start: #fdfbfb;
+            --bg-color-end: #ebedee;
+            --text-color: #333;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top, var(--bg-color-start) 0%, var(--bg-color-end) 100%);
+            transition: background 1.5s ease;
+            position: relative;
+        }
+
+        /* --- THEMES --- */
+        body.love-theme {
+            background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+        }
+
+        /* --- FLOATING HEARTS ANIMATION --- */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            background-color: var(--primary-color);
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            margin: 0 10px;
+            transform: rotate(-45deg);
+            animation: floatUp 6s linear infinite;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            position: absolute;
+            background-color: var(--primary-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .heart:before { top: -15px; left: 0; }
+        .heart:after { left: 15px; top: 0; }
+
+        @keyframes floatUp {
+            0% { bottom: -50px; opacity: 1; transform: rotate(-45deg) translateX(0); }
+            50% { opacity: 0.8; }
+            100% { bottom: 110vh; opacity: 0; transform: rotate(-45deg) translateX(20px); }
+        }
+
+        /* --- CONTAINER & CARDS --- */
+        #app {
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            min-height: 400px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .page {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .page.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Style for when a page exits (moving forward) */
+        .page.exit {
+            transform: translate(-50%, -150%) scale(0.8) rotate(-5deg);
+            opacity: 0;
+        }
+
+        /* --- IMAGES --- */
+        .landing-img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .img-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .content-img {
+            width: 45%;
+            max-width: 140px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .single-content-img {
+            width: 80%;
+            max-width: 180px;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary-color);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+            background: #ff3355;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* --- SPECIFIC PAGE STYLES --- */
+        
+        /* Page 12 & Page 3: Yes/No Buttons */
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            width: 100%;
+            justify-content: center;
+            height: 60px;
+            align-items: center;
+        }
+
+        #btn-no, #btn-no-promise {
+            background: #aaa;
+            box-shadow: none;
+            position: absolute;
+            right: 20%;
+        }
+        
+        #btn-yes {
+            position: absolute;
+            left: 20%;
+            z-index: 5;
+        }
+
+        /* Page 16: Input Form */
+        .input-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary-color);
+        }
+
+        .error-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 480px) {
+            .page {
+                padding: 30px 20px;
+                width: 95%;
+            }
+            h1 { font-size: 1.5rem; }
+            p { font-size: 1rem; }
+            .btn-group {
+                gap: 10px;
+            }
+            .content-img {
+                width: 48%; /* Slight adjustment for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://i.ibb.co/d4ZLDRD0/Screenshot-20250629-190214.jpg" alt="AUME Logo">
-    <nav>
-      <a href="#">Home</a>
-      <a href="#services">Services</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/02/07/audio_1067252276.mp3" type="audio/mpeg">
+    </audio>
 
-  <div class="container">
-    <section class="hero">
-      <h1>Your Career. Our Mission.</h1>
-      <p>AUME Career is your personal support system to craft powerful resumes, sharpen your online presence, and gain clarity on your professional journey. All our services are reviewed and guided by real career experts.</p>
-      <p><strong>We also host FREE Weekly Career Guidance Workshops</strong> for students, job seekers & anyone feeling stuck — open to all!</p>
-      <a href="#" class="cta-btn">Fill Google Form to Get Started</a>
-    </section>
+    <div id="hearts-container"></div>
 
-    <section class="section" id="services">
-      <h2>How We Help You</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Step 1: Book a Free Diagnosis</h3>
-          <p>We connect over call or message and understand your current situation.</p>
+    <div id="app">
+        <!-- PAGE 1: Landing -->
+        <div class="page active" id="page-1">
+            <img src="https://i.ibb.co/d0XGzq12/Whats-App-Image-2026-02-14-at-8-09-20-PM.jpg" alt="For Chhoti" class="landing-img">
+            <h1>I hope this reached<br>Chhoti 💌</h1>
+            <button class="btn" onclick="startJourney()">Yes</button>
         </div>
-        <div class="card">
-          <h3>Step 2: Resume & Profile Review</h3>
-          <p>Our experts carefully review your resume, LinkedIn, and overall presence.</p>
-        </div>
-        <div class="card">
-          <h3>Step 3: Receive Custom Plan</h3>
-          <p>You get a personalized action plan — what to fix, build, and focus on.</p>
-        </div>
-        <div class="card">
-          <h3>Step 4: 24/7 Support & Mentorship</h3>
-          <p>Ongoing guidance through WhatsApp, email, and optional video sessions.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section newsletter" id="newsletter">
-      <h2>Stay In The Loop</h2>
-      <p>Subscribe to our newsletter to get the latest career tips, resume ideas, job leads, and event invites delivered to your inbox.</p>
-      <form>
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-  </div>
+        <!-- PAGE 2: Intro -->
+        <div class="page" id="page-2">
+            <p>pata hai muje ek abhishek naam ka ladka tumhe tang karta hai</p>
+            <button class="btn" onclick="nextPage()">( hai ek suar )</button>
+        </div>
 
-  <footer id="contact">
-    <div class="footer-icons">
-      <a href="mailto:infoaume.in@gmail.com">
-        <svg viewBox="0 0 512 512"><path d="M502.3 190.8l-192-160A48 48 0 0 0 272 32H64a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h384a48 48 0 0 0 48-48V240a48 48 0 0 0-17.7-49.2zM464 432a16 16 0 0 1-16 16H64a16 16 0 0 1-16-16V80a16 16 0 0 1 16-16h208v128a32 32 0 0 0 32 32h128z"/></svg>
-        infoaume.in@gmail.com
-      </a>
-      <a href="#">
-        <svg viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256c0 110.1 71.6 203.2 170.7 236.2 12.5 2.3 17.1-5.4 17.1-12v-44.4c-69.5 15.1-84-33.5-84-33.5-11.4-28.9-27.8-36.6-27.8-36.6-22.7-15.5 1.7-15.2 1.7-15.2 25 1.8 38.2 25.6 38.2 25.6 22.3 38.2 58.4 27.2 72.6 20.8 2.2-16.1 8.7-27.2 15.9-33.5-55.5-6.3-113.9-27.8-113.9-123.6 0-27.3 9.8-49.6 25.8-67.1-2.6-6.3-11.2-31.9 2.5-66.5 0 0 21-6.7 68.8 25.6a240.6 240.6 0 0 1 125.2 0c47.7-32.3 68.7-25.6 68.7-25.6 13.8 34.6 5.2 60.2 2.5 66.5 16 17.5 25.8 39.8 25.8 67.1 0 96-58.5 117.3-114.2 123.4 8.9 7.7 16.8 22.9 16.8 46.2v68.5c0 6.6 4.5 14.4 17.2 12C432.4 459.2 504 366.1 504 256 504 119 393 8 256 8z"/></svg>
-        LinkedIn: AUME Career
-      </a>
-      <a href="https://instagram.com/aumeverse">
-        <svg viewBox="0 0 512 512"><path d="M349.33 69.33A93.33 93.33 0 1 1 256 162.66a93.33 93.33 0 0 1 93.33-93.33m0-37.33A130.66 130.66 0 1 0 480 162.66 130.69 130.69 0 0 0 349.33 32zM256 352a96 96 0 1 0 96 96 96.11 96.11 0 0 0-96-96zM256 480a128 128 0 1 1 128-128 128.14 128.14 0 0 1-128 128z"/></svg>
-        Instagram: @aumeverse
-      </a>
-      <a href="#">
-        <svg viewBox="0 0 384 512"><path d="M168 0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h344c13.3 0 24-10.7 24-24V168L248 0H168zm48 128V0l128 128H216z"/></svg>
-        Location: Mumbai, India
-      </a>
+        <!-- PAGE 3: Assurance -->
+        <div class="page" id="page-3">
+            <p>Kabhi bhi kisi bhi situation mein ye mat sochna ki main tumse pyaar nahi karta.</p>
+            <div class="btn-group">
+                <button class="btn" onclick="nextPage()">Promise</button>
+                <button class="btn" id="btn-no-promise" onmouseover="moveButtonPromise()" ontouchstart="moveButtonPromise()">No</button>
+            </div>
+        </div>
+
+        <!-- PAGE 4: Depth -->
+        <div class="page" id="page-4">
+            <div class="img-row">
+                <img src="https://i.ibb.co/qhrwyBD/Whats-App-Image-2026-02-14-at-8-09-19-PM.jpg" class="content-img" alt="Memory 1">
+                <img src="https://i.ibb.co/1J8960LR/Screenshot-2026-02-14-202024.png" class="content-img" alt="Memory 2">
+            </div>
+            <p>Zindagi mein itna pyaar kisi se nahi kiya jitna tumse kiya hai, meri <strong>shon pari</strong>.</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 5: How it started -->
+        <div class="page" id="page-5">
+            <p>Saalon pehle Instagram pe<br><strong>'Zara Zara Behakta Hai'</strong><br>tumhari awaaz suni thi.</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 6: Falling -->
+        <div class="page" id="page-6">
+            <p>Us din pehle tumhari awaaz se,<br>phir tumhari nigaahon se,<br>aur phir tumse pyaar ho gaya.</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 7: Everyday -->
+        <div class="page" id="page-7">
+            <img src="https://i.ibb.co/gLLgRBLK/jadu.jpg" class="single-content-img" alt="Jadu">
+            <p>Subah uthte hi tumhari yaad aana,<br>raat ko hamari photo dekh kar muskurana,<br>aur chain se so jana.</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 8: Valentine -->
+        <div class="page" id="page-8">
+            <img src="https://i.ibb.co/BK6zSMFY/Screenshot-2026-02-14-202841.png" class="single-content-img" alt="Valentine">
+            <p>I don’t need Valentine’s Day to love you.<br>Every day is Valentine with you.<br>I love you my cute little <strong>princess 👑💖</strong></p>
+            <button class="btn" onclick="nextPage()">Always</button>
+        </div>
+
+        <!-- PAGE 9: Timeless -->
+        <div class="page" id="page-9">
+            <p>Samay jaisa bhi ho,<br>pyaar hamesha tumse hi hoga.</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 10: Declaration -->
+        <div class="page" id="page-10">
+            <p>Puri duniya jaanti hai ab<br><strong>Abhishek ki biwi</strong> kaun hogi.</p>
+            <button class="btn" onclick="nextPage()">Aisa kya</button>
+        </div>
+
+        <!-- PAGE 11: NEW PAGE -->
+        <div class="page" id="page-11">
+            <img src="https://i.ibb.co/JwB4JHsV/Screenshot-2026-02-14-203114.png" class="single-content-img" alt="Nanhi Munni">
+            <p>hai ek nanhi munni si babu gussa ho jati hai abhishek ke vajah se</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 12: Question (The Game) -->
+        <div class="page" id="page-12">
+            <h2>Karte ho pyaar Abhishek se?</h2>
+            <div class="btn-group">
+                <button class="btn" id="btn-yes" onclick="nextPage()">Yes</button>
+                <button class="btn" id="btn-no" onmouseover="moveButton()" ontouchstart="moveButton()">No</button>
+            </div>
+        </div>
+
+        <!-- PAGE 13: Error Love -->
+        <div class="page" id="page-13">
+            <div class="error-text">404 Error</div>
+            <h2>Love Overloaded 💖</h2>
+            <p>I love you so much meri shon pari</p>
+            <button class="btn" onclick="nextPage()">Continue</button>
+        </div>
+
+        <!-- PAGE 14: Truth -->
+        <div class="page" id="page-14">
+            <img src="https://i.ibb.co/Z1YJ4jxT/Screenshot-2026-02-14-203416.png" class="single-content-img" alt="No Option">
+            <p>Tumhe na kehne ka option hai hi nahi.<br>Na is janam, na kisi aur janam mein.</p>
+            <button class="btn" onclick="nextPage()">Forever</button>
+        </div>
+
+        <!-- PAGE 15: Heartbeat -->
+        <div class="page" id="page-15">
+            <p>Jis din follow back aaya tha,<br>dil dhak-dhak karne laga tha.</p>
+            <p>Aaj bhi hota hai jab tumhe real life mein dekhta hoon, meri pyari.</p>
+            <button class="btn" onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- PAGE 16: Final Form -->
+        <div class="page" id="page-16">
+            <h2>I love you so much, pyari.</h2>
+            <p>You love abhishek too right ?</p>
+            <div class="input-group">
+                <input type="text" id="love-reply" placeholder="jo bhi hai mann mai likh do yhan pe" required>
+            </div>
+            <button class="btn" onclick="sendToWhatsApp()">Submit 💘</button>
+        </div>
     </div>
-    <p>© 2025 AUME Career, a division of AUMEverse. All rights reserved.</p>
-  </footer>
 
+    <script>
+        // --- CONFIGURATION ---
+        let currentPage = 1;
+        const totalPages = 16;
+        const audio = document.getElementById('bg-music');
+        audio.volume = 0.4;
+        let heartInterval;
+
+        // --- HISTORY & NAVIGATION LOGIC ---
+        
+        // On Page Load: Set initial history state
+        window.onload = function() {
+            history.replaceState({page: 1}, "", "");
+
+            // Add Enter key listener for the final input
+            const input = document.getElementById('love-reply');
+            if (input) {
+                input.addEventListener("keypress", function(event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        sendToWhatsApp();
+                    }
+                });
+            }
+        };
+
+        // Listen for "Back" button
+        window.onpopstate = function(event) {
+            if (event.state) {
+                updateDisplay(event.state.page);
+            } else {
+                updateDisplay(1);
+            }
+        };
+
+        function startJourney() {
+            document.body.classList.add('love-theme');
+            
+            if(audio.paused) {
+                audio.play().catch(e => console.log("Audio play failed usually due to browser permissions"));
+            }
+
+            if (!heartInterval) {
+                heartInterval = setInterval(createHeart, 300);
+            }
+
+            nextPage();
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                const nextPageNum = currentPage + 1;
+                history.pushState({page: nextPageNum}, "", "#page-" + nextPageNum);
+                updateDisplay(nextPageNum);
+            }
+        }
+
+        function updateDisplay(targetPage) {
+            const currentEl = document.getElementById(`page-${currentPage}`);
+            const targetEl = document.getElementById(`page-${targetPage}`);
+
+            const isForward = targetPage > currentPage;
+
+            if (isForward) {
+                currentEl.classList.remove('active');
+                currentEl.classList.add('exit');
+                
+                setTimeout(() => {
+                    targetEl.classList.add('active');
+                    targetEl.classList.remove('exit');
+                }, 300);
+            } else {
+                currentEl.classList.remove('active');
+                currentEl.classList.remove('exit');
+                
+                targetEl.classList.remove('exit');
+                targetEl.classList.add('active');
+            }
+
+            currentPage = targetPage;
+        }
+
+        // --- FLOATING HEARTS LOGIC ---
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            
+            const colors = ['#ff4d6d', '#ff758f', '#c9184a', '#ffb3c1'];
+            heart.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .heart[style*="background-color: ${heart.style.backgroundColor}"]:before,
+                .heart[style*="background-color: ${heart.style.backgroundColor}"]:after {
+                    background-color: ${heart.style.backgroundColor} !important;
+                }
+            `;
+            document.head.appendChild(style);
+
+            document.getElementById('hearts-container').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+                style.remove();
+            }, 6000);
+        }
+
+        // --- THE "NO" BUTTON ESCAPE LOGIC (Page 12) ---
+        function moveButton() {
+            const btn = document.getElementById('btn-no');
+            const container = document.getElementById('page-12');
+            
+            const rect = container.getBoundingClientRect();
+            
+            const maxX = rect.width - btn.offsetWidth - 40;
+            const maxY = rect.height - btn.offsetHeight - 40;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            btn.style.position = 'absolute';
+            btn.style.left = randomX + 'px';
+            btn.style.top = randomY + 'px';
+        }
+
+        // --- THE "NO" BUTTON ESCAPE LOGIC (Page 3) ---
+        function moveButtonPromise() {
+            const btn = document.getElementById('btn-no-promise');
+            const container = document.getElementById('page-3');
+            
+            const rect = container.getBoundingClientRect();
+            
+            const maxX = rect.width - btn.offsetWidth - 30;
+            const maxY = rect.height - btn.offsetHeight - 30;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            btn.style.position = 'absolute';
+            btn.style.left = randomX + 'px';
+            btn.style.top = randomY + 'px';
+        }
+
+        // --- WHATSAPP INTEGRATION ---
+        function sendToWhatsApp() {
+            const input = document.getElementById('love-reply');
+            const message = input.value.trim();
+            
+            if(message === "") {
+                alert("Please write something sweet! 🥺");
+                return;
+            }
+
+            // Redirect to WhatsApp with the specific number
+            // Added 91 for India Country Code
+            const phoneNumber = "918828578141";
+            const finalText = encodeURIComponent(`Hey Abhishek! I saw your site. ${message} 💖`);
+            window.location.href = `https://wa.me/${phoneNumber}?text=${finalText}`;
+        }
+    </script>
 </body>
 </html>
